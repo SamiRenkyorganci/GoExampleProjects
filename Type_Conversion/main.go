@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 
@@ -26,6 +29,8 @@ func main() {
 	//fmt.Println(a + int(b)) cannot convert b (variable of type string) to int
 
 	num1 := 106 //ASCII VALUE  "j"
-	str1 := string(num1)
+	str1 := string(rune(num1))
+	str2 := strconv.Itoa(num1) // int-->string
 	fmt.Printf("%v %T\n", str1, str1)
+	fmt.Printf("%v %T\n", str2, str2)
 }
